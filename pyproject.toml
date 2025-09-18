@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphql_to_mcp"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["fastmcp==2.12.2", "ariadne-codegen==0.15.2"]
+
+[project.scripts]
+mcp = "graphql_to_mcp.main:main"
+
+[tool.ariadne-codegen]
+remote_schema_url = "https://nimara-demo.eu.saleor.cloud/graphql/"
+queries_path = "graphql_to_mcp/queries.graphql"
+# target_package_name = "saleor_client"
+target_package_path = "graphql_to_mcp"
+# convert_to_snake_case = false
