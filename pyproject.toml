@@ -7,7 +7,7 @@ name = "graphql_to_mcp"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["fastmcp==2.12.2", "ariadne-codegen==0.15.2"]
+dependencies = ["fastmcp==2.14.0", "ariadne-codegen==0.15.2"]
 
 [project.scripts]
 mcp = "graphql_to_mcp.main:main"
